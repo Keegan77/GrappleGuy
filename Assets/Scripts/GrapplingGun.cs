@@ -89,7 +89,7 @@ public class GrapplingGun : MonoBehaviour
         {
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
-            m_rigidbody.gravityScale = 1;
+            //m_rigidbody.gravityScale = 1;
         }
         else
         {
@@ -136,6 +136,7 @@ public class GrapplingGun : MonoBehaviour
         m_springJoint2D.autoConfigureDistance = false;
         if (!launchToPoint && !autoConfigureDistance)
         {
+            
             m_springJoint2D.distance = targetDistance;
             m_springJoint2D.frequency = targetFrequncy;
         }
