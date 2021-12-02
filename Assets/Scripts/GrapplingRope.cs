@@ -29,7 +29,6 @@ public class GrapplingRope : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("hey");
         moveTime = 0;
         m_lineRenderer.positionCount = percision;
         waveSize = StartWaveSize;

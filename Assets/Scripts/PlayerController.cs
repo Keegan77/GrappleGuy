@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
-        Debug.Log(rb.velocity.x);
+        //Debug.Log(rb.velocity.x);
         if (gr.enabled == false)
         {
             if (moveInput == 1)
@@ -56,5 +56,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Spikes")
+        {
+            Destroy(gameObject);
+        }
     }
 }
