@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MoveUp
   - MoveDown
+  - Spikes
   layers:
   - Default
   - TransparentFX
