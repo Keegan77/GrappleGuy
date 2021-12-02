@@ -25,7 +25,7 @@ public class MoveUpnDown : MonoBehaviour
         {
             movingDown = false;
         }
-        if (transform.position.y > 10)
+        if (transform.position.y > 10.5f)
         {
             movingDown = true;
         }
