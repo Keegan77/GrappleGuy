@@ -1,3 +1,3 @@
 Game Developed by Keegan Butt
 
-This game is called Grapple guy! Just pushed the alpha commit, which has a playtest level, elevators, camera movement, grapple hook movement, and spikes!
+This game is called Grapple guy! New sort of v1.5 commit. I'm a bit behind, and would call this half-way between alpha and beta. This version has a finished completable level. The next version that I push should have atleast 2 levels, a main menu, a function to restart the game when you die, and possibly assets. In this version, I also added a cannon that can shoot spikes at you, and a door at the end of the level.
