@@ -6,6 +6,8 @@ public class MoveUpnDown : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool movingDown = true;
+    public float yUp;
+    public float yDown;
     void Start()
     {
         
@@ -21,11 +23,11 @@ public class MoveUpnDown : MonoBehaviour
         {
             transform.Translate(0, .005f, 0);
         }
-        if (transform.position.y < 3)
+        if (transform.position.y < yUp /*3*/)
         {
             movingDown = false;
         }
-        if (transform.position.y > 10.5f)
+        if (transform.position.y > yDown/*10.5f*/)
         {
             movingDown = true;
         }
