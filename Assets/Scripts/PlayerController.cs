@@ -64,4 +64,16 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Door"))
+            
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                Destroy(gameObject);
+                Debug.Log("Test");
+            }
+        }
+    }
 }
