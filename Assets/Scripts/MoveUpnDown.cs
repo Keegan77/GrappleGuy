@@ -8,6 +8,7 @@ public class MoveUpnDown : MonoBehaviour
     public bool movingDown = true;
     public float yUp;
     public float yDown;
+    float platformspeed = 3f;
     void Start()
     {
         
@@ -18,10 +19,10 @@ public class MoveUpnDown : MonoBehaviour
     {
         if (movingDown)
         {
-            transform.Translate(0, -.005f, 0);
+            transform.Translate(new Vector3(0, -platformspeed, 0) * Time.deltaTime);
         } else if (!movingDown)
         {
-            transform.Translate(0, .005f, 0);
+            transform.Translate(new Vector3(0, platformspeed, 0) * Time.deltaTime);
         }
         if (transform.position.y < yUp /*3*/)
         {

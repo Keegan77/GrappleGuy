@@ -8,6 +8,7 @@ TagManager:
   - MoveDown
   - Spikes
   - Door
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
     private Rigidbody2D rb;
     public GrapplingRope gr;
+    public GameManager gamemanager;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,8 +72,8 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W))
             {
+                gamemanager.levelClear = true;
                 Destroy(gameObject);
-                Debug.Log("Test");
             }
         }
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class GunRight : MonoBehaviour
 {
     public float startingTime;
     float currentTime;
@@ -19,7 +19,7 @@ public class Gun : MonoBehaviour
         currentTime -= Time.deltaTime;
         if (currentTime < 0)
         {
-            Instantiate(spikes, new Vector3 (transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(spikes, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             currentTime = startingTime;
         }
 
