@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveWhenSteppedOn : MonoBehaviour
+public class SpecificPlatformMovement : MonoBehaviour
 {
     public bool steppedOn;
+
     float time = 1;
     public float movementCap;
+    public GameObject player;
+    
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (steppedOn)
@@ -20,13 +22,15 @@ public class MoveWhenSteppedOn : MonoBehaviour
             time -= Time.deltaTime;
             if (time < 0)
             {
-                if (transform.position.y < movementCap)
+                transform.Translate(new Vector3(0, -2, 0) * Time.deltaTime);
+
+                if (transform.position.x > movementCap)
                 {
-                    transform.Translate(new Vector3(2, 0, 0) * Time.deltaTime);
+                    Destroy(gameObject);
                 }
-                
+
             }
-            
+
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -34,6 +38,8 @@ public class MoveWhenSteppedOn : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             steppedOn = true;
+
         }
     }
+
 }

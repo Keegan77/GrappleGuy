@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     public GrapplingRope gr;
     public GameManager gamemanager;
+    public bool doorTriggerStepped;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +51,7 @@ public class PlayerController : MonoBehaviour
             {
                 transform.Translate(Vector2.left *  5 *Time.deltaTime);
             }
-            
+
         }
         
     }
@@ -75,6 +76,10 @@ public class PlayerController : MonoBehaviour
                 gamemanager.levelClear = true;
                 Destroy(gameObject);
             }
+        }
+        if (collision.CompareTag("DoorTrigger"))
+        {
+            doorTriggerStepped = true;
         }
     }
 }
