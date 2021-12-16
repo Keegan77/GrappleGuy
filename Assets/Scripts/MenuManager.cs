@@ -13,6 +13,8 @@ public class MenuManager : MonoBehaviour
     public Text pressEnter;
     public Text levelSelect;
     public Text oneTwoThree;
+    public Text lvlTwoName;
+    public Text lvlThreeName;
     public GameObject[] textSelections;
     bool onTitleScreen = true;
     bool menu = false;
@@ -39,7 +41,8 @@ public class MenuManager : MonoBehaviour
             currentTime -= Time.deltaTime;
             levelSelect.gameObject.SetActive(true);
             oneTwoThree.gameObject.SetActive(true);
-
+            lvlTwoName.gameObject.SetActive(true);
+            lvlThreeName.gameObject.SetActive(true);
 
             switch (currentSelection)
             {
